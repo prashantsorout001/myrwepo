@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            color: white;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        .photo-gallery img {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            border-radius: 10px;
+            border: 3px solid white;
+            object-fit: cover;
+        }
+        .message {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        .btn {
+            background: #ff6f61;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Happy Birthday, My Son! 🎂</h1>
+        <p class="message">Wishing you a day filled with love, joy, and lots of cake! 🎁🎊</p>
+        
+        <div class="photo-gallery" id="gallery">
+            <!-- Add images dynamically -->
+        </div>
+        
+        <button class="btn" onclick="showSurprise()">Click for a Surprise!</button>
+    </div>
+    
+    <script>
+        const photos = ['p1.jpg', 'p2.jpg', 'p3.jpg']; // Add your photo file names here
+        const gallery = document.getElementById('gallery');
+        
+        photos.forEach(photo => {
+            let img = document.createElement('img');
+            img.src = photo;
+            img.alt = "Friend's Photo";
+            gallery.appendChild(img);
+        });
+
+        function showSurprise() {
+            alert("🎊 Happy Birthday! Have an amazing year ahead! 🎊");
+        }
+    </script>
+</body>
+</html>
